@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import {Fragment} from 'react';
+import Folder from './components/Folder';
+import Arrow, { DIRECTION } from 'react-arrows'
 import './App.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <div className="App">
+        <h1>Decipher your codebase, see how everything ties together</h1>
+        <div>See how it works on a simple example:</div>
+          <div id = "folder-container">
+            <Folder name = "folder1" files = {["database", "routes"]}/>
+            <Folder name = "folder2" files = {["frontend", "components"]}/>
+          </div>
+      </div>
+      
+    </Fragment>
   );
 }
 
